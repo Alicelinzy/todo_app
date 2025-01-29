@@ -1,23 +1,23 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-* body {
+
+body {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: rgb(136, 134, 130);
+  background-color: rgb(162, 163, 163);
 }
-* .container {
-  display: flex;
-  gap: 5px;
-}
-* .main-container {
+
+.main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 600px;
   background-color: rgb(74, 100, 100);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px, rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 8px 16px, rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.2) 0px 40px 64px;
@@ -25,12 +25,19 @@
   padding-block: 25px;
   gap: 20px;
 }
-* .todo-input {
+
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.todo-input {
   padding-inline: 10px;
   padding-block: 10px;
   background-color: rgb(226, 226, 223);
 }
-* .todo-list {
+
+.todo-list {
   align-items: center;
   justify-content: center;
   list-style: none;
@@ -40,23 +47,27 @@
   font-weight: bold;
   background-color: rgb(194, 191, 191);
 }
-* .todo-item {
+
+.todo-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 10px;
   position: relative;
 }
-* .todo-remove-btn {
+
+.todo-remove-btn {
   cursor: pointer;
 }
-* .btn2 {
+
+.btn2 {
   background-color: transparent;
   color: rgb(136, 14, 14);
   float: right;
   border: none;
 }
-* .fa-pencil {
+
+.fa-pencil {
   position: absolute;
   right: 70px;
   top: 7px;

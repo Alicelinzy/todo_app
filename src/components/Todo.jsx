@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 
 function Todo() {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState('');
   const [isEditing, setIsEditing] = useState(false); 
   const [editIndex, setEditIndex] = useState(null); 
-  const [completedTask, setCompleteTask] = useState([]);
+  // const [completedTask, setCompleteTask] = useState([]);
 
   const addTask = () => {
     if (task.trim()) {
@@ -34,11 +34,13 @@ function Todo() {
       }
     };
 
-    const isCompleted = (key) => {
-      if (!completedTask.includes(key)) {
-        setCompleteTask([...completedTask, key]);
-      }
-    };
+    // const isCompleted = (key) => {
+    //   if (!completedTask.includes(key)) {
+    //     setCompleteTask([...completedTask, key]);
+    //   } else {
+    //     setCompleteTask(completedTask.filter(item => item !== key));
+    //   }
+    // };
 
 
  
@@ -55,6 +57,7 @@ function Todo() {
   
   return (
     <div className='main-container'>
+  
       <div className="container">
       <input
           type="text"
@@ -76,11 +79,11 @@ function Todo() {
               <span>{t}</span>
               <buttton 
                onClick={() => startEditing(index)}>
-              <i class="fa fa-pencil" aria-hidden="true"></i>
+              <i className="fa fa-pencil" aria-hidden="true"></i>
               </buttton>
               
-              <button className='btn2' onClick={() => removeTask(index)} classNamw="todo-remove-btn">
-              <i class="fa fa-trash" aria-hidden="true"></i>
+              <button className='btn2' onClick={() => removeTask(index)} >
+              <i className="fa fa-trash" aria-hidden="true"></i>
               </button>
               
             </li>
@@ -89,7 +92,7 @@ function Todo() {
      
         </ul>
         </div>
+        
   );
 }
-
 export default Todo
